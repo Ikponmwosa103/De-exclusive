@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DE EXCLUSIVE COLLECTION</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Montserrat:wght@200;300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-text">DE EXCLUSIVE</div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="cursor"></div>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        Complimentary shipping on all orders over $500 &nbsp;&bull;&nbsp; New Arrivals Just Dropped
+    </div>
+
+    <!-- Navigation -->
+       <div class="nav-wrapper" id="navWrapper">
+        <nav>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-left">
+                <a href="./index.html">Home</a>
+                <a href="#women" class="collections-link">Collections</a>   <!-- Fixed: now scrolls to products -->
+                <a href="#women" class="collections-link">Men</a>
+                <a href="#women" class="collections-link">Accessories</a>
+                <a href="./Editorial.html">Editorial</a>
+            </div>
+            <div class="logo">
+                <a href="./index.html" class="logo-main">DE EXCLUSIVE</a>
+                <div class="logo-sub">Collection</div>
+            </div>
+            <div class="nav-right">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="far fa-user"></i></a>
+                <a href="#"><i class="far fa-heart"></i></a>
+                <button id="themeToggle">🌙</button>
+                <a href="#" class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">3</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#women" class="collections-link" onclick="toggleMenu()">Collections</a>
+        <a href="#women" class="collections-link" onclick="toggleMenu()">Women</a>
+        <a href="#women" class="collections-link" onclick="toggleMenu()">Men</a>
+        <a href="#women" class="collections-link" onclick="toggleMenu()">Accessories</a>
+        <a href="./Editorial.html" onclick="toggleMenu()">Editorial</a>
+        <a href="#" onclick="toggleMenu()">About</a>
+        <a href="#" onclick="toggleMenu()">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+<section class="hero">
+
+<div class="hero-slider">
+
+    <!-- SLIDE 1 -->
+    <div class="hero-slide active">
+        <div class="hero-slide-bg" style="background-image: url('https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1600&q=80')"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <p class="hero-tag">Autumn / Winter 2025</p>
+            <h1 class="hero-title">The Art of<br><em>Exclusive</em> Style</h1>
+            <p class="hero-desc">Discover our latest collection of meticulously crafted luxury pieces.</p>
+            <div class="hero-buttons">
+                <a href="#collections" class="btn-primary">Shop Collection</a>
+                <a href="#editorial" class="btn-secondary">View Lookbook</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="hero-slide">
+        <div class="hero-slide-bg" style="background-image: url('https://images.unsplash.com/photo-1445205170230-053b83016050?w=1600&q=80')"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <p class="hero-tag">Street Luxury</p>
+            <h1 class="hero-title">Modern<br><em>Urban</em> Fashion</h1>
+            <p class="hero-desc">Bold styles designed for confident everyday expression.</p>
+                        <div class="hero-buttons">
+                <a href="#collections" class="btn-primary">Shop Collection</a>
+                <a href="#editorial" class="btn-secondary">View Lookbook</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="hero-slide">
+        <div class="hero-slide-bg" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1600&auto=format&fit=crop')"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <p class="hero-tag">Premium Collection</p>
+            <h1 class="hero-title">Timeless<br><em>Elegance</em></h1>
+            <p class="hero-desc">Crafted with precision for those who value quality.</p>
+                        <div class="hero-buttons">
+                <a href="#collections" class="btn-primary">Shop Collection</a>
+                <a href="#editorial" class="btn-secondary">View Lookbook</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="hero-slide">
+        <div class="hero-slide-bg" style="background-image: url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1600&auto=format&fit=crop')"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <p class="hero-tag">Luxury Wear</p>
+            <h1 class="hero-title">Refined<br><em>Minimalism</em></h1>
+            <p class="hero-desc">Clean designs that speak without noise.</p>
+                        <div class="hero-buttons">
+                <a href="#collections" class="btn-primary">Shop Collection</a>
+                <a href="#editorial" class="btn-secondary">View Lookbook</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 5 -->
+    <div class="hero-slide">
+        <div class="hero-slide-bg" style="background-image: url('https://images.unsplash.com/photo-1538329972958-465d6d2144ed?q=80&w=1600&auto=format&fit=crop')"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <p class="hero-tag">Fashion Week</p>
+            <h1 class="hero-title">Runway<br><em>Ready</em> Looks</h1>
+            <p class="hero-desc">Inspired by global fashion trends and runway designs.</p>
+                        <div class="hero-buttons">
+                <a href="#collections" class="btn-primary">Shop Collection</a>
+                <a href="#editorial" class="btn-secondary">View Lookbook</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 6 -->
+    <div class="hero-slide">
+        <div class="hero-slide-bg" style="background-image: url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=1600&auto=format&fit=crop')"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <p class="hero-tag">New Season</p>
+            <h1 class="hero-title">Fresh<br><em>Arrivals</em></h1>
+            <p class="hero-desc">Explore the latest additions to our exclusive collection.</p>
+                        <div class="hero-buttons">
+                <a href="#collections" class="btn-primary">Shop Collection</a>
+                <a href="#editorial" class="btn-secondary">View Lookbook</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 7 -->
+    <div class="hero-slide">
+        <div class="hero-slide-bg" style="background-image: url('https://images.unsplash.com/photo-1612423284934-2850a4ea6b0f?q=80&w=1600&auto=format&fit=crop')"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <p class="hero-tag">Luxury Accessories</p>
+            <h1 class="hero-title">Details<br><em>Matter</em></h1>
+            <p class="hero-desc">Elevate your style with refined accessories.</p>
+                        <div class="hero-buttons">
+                <a href="#collections" class="btn-primary">Shop Collection</a>
+                <a href="#editorial" class="btn-secondary">View Lookbook</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Indicators -->
+<div class="hero-indicators">
+    <div class="hero-indicator active" onclick="goToSlide(0)"></div>
+    <div class="hero-indicator" onclick="goToSlide(1)"></div>
+    <div class="hero-indicator" onclick="goToSlide(2)"></div>
+    <div class="hero-indicator" onclick="goToSlide(3)"></div>
+    <div class="hero-indicator" onclick="goToSlide(4)"></div>
+    <div class="hero-indicator" onclick="goToSlide(5)"></div>
+    <div class="hero-indicator" onclick="goToSlide(6)"></div>
+</div>
+<div class="hero-indicators">
+            <div class="hero-indicator active" onclick="goToSlide(0)"></div>
+            <div class="hero-indicator" onclick="goToSlide(1)"></div>
+            <div class="hero-indicator" onclick="goToSlide(2)"></div>
+            <div class="hero-indicator" onclick="goToSlide(3)"></div>
+            <div class="hero-indicator" onclick="goToSlide(4)"></div>
+            <div class="hero-indicator" onclick="goToSlide(5)"></div>
+            <div class="hero-indicator" onclick="goToSlide(6)"></div>
+        </div>
+
+        <a href="#women" class="hero-scroll">
+            <span>Scroll</span>
+            <div class="hero-scroll-line"></div>
+        </a>
+
+<!-- Scroll -->
+<a href="#collections" class="hero-scroll">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+</a>
+
+</section>
+
+    <!-- Featured Products -->
+<div class="products-section" id="women">
+    <div class="section">
+
+        <div class="section-header reveal">
+            <p class="section-tag">New Arrivals</p>
+            <h2 class="section-title">Featured Collection</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="products-grid">
+
+            <!-- PRODUCT CARD -->
+            <div class="product-card reveal">
+                <div class="product-image-wrapper">
+                    <img class="product-img" src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600&q=80">
+
+                    <span class="product-badge">New</span>
+
+                    <div class="product-actions">
+                        <button><i class="far fa-heart"></i></button>
+                        <button><i class="fas fa-shopping-bag"></i></button>
+                        <button><i class="far fa-eye"></i></button>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <p class="product-brand">DE Exclusive</p>
+                    <h3 class="product-name">Silk Draped Evening Gown</h3>
+                    <p class="product-price">$2,450</p>
+                </div>
+            </div>
+
+
+                <div class="product-card reveal">
+                    <div class="product-image-wrapper">
+                        <img class="product-img" src="https://images.unsplash.com/photo-1599108859613-88a1fff8e2e4?w=500&auto=format&fit=crop&q=60" alt="Product">
+                        <div class="product-actions">
+                            <button class="product-action-btn"><i class="far fa-heart"></i></button>
+                            <button class="product-action-btn"><i class="fas fa-shopping-bag"></i></button>
+                            <button class="product-action-btn"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">DE Exclusive</p>
+                        <h3 class="product-name">Structured Leather Tote</h3>
+                        <p class="product-price">$1,890</p>
+                    </div>
+                </div>
+
+                <div class="product-card reveal">
+                    <div class="product-image-wrapper">
+                        <img class="product-img" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&q=80" alt="Product">
+                        <span class="product-badge">Exclusive</span>
+                        <div class="product-actions">
+                            <button class="product-action-btn"><i class="far fa-heart"></i></button>
+                            <button class="product-action-btn"><i class="fas fa-shopping-bag"></i></button>
+                            <button class="product-action-btn"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">DE Exclusive</p>
+                        <h3 class="product-name">Tailored Wool Overcoat</h3>
+                        <p class="product-price">$3,200 <span class="original">$3,800</span></p>
+                    </div>
+                </div>
+
+                <div class="product-card reveal">
+                    <div class="product-image-wrapper">
+                        <img class="product-img" src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&q=80" alt="Product">
+                        <div class="product-actions">
+                            <button class="product-action-btn"><i class="far fa-heart"></i></button>
+                            <button class="product-action-btn"><i class="fas fa-shopping-bag"></i></button>
+                            <button class="product-action-btn"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">DE Exclusive</p>
+                        <h3 class="product-name">Minimalist Leather Sneakers</h3>
+                        <p class="product-price">$890</p>
+                    </div>
+                </div>
+
+                <div class="product-card reveal">
+                    <div class="product-image-wrapper">
+                        <img class="product-img" src="https://images.unsplash.com/photo-1617019114583-affb34d1b3cd?w=600&q=80" alt="Product">
+                        <span class="product-badge">Limited</span>
+                        <div class="product-actions">
+                            <button class="product-action-btn"><i class="far fa-heart"></i></button>
+                            <button class="product-action-btn"><i class="fas fa-shopping-bag"></i></button>
+                            <button class="product-action-btn"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">DE Exclusive</p>
+                        <h3 class="product-name">Cashmere Blend Scarf</h3>
+                        <p class="product-price">$650</p>
+                    </div>
+                </div>
+
+                <div class="product-card reveal">
+                    <div class="product-image-wrapper">
+                        <img class="product-img" src="https://images.unsplash.com/photo-1591561954557-26941169b49e?w=600&q=80" alt="Product">
+                        <div class="product-actions">
+                            <button class="product-action-btn"><i class="far fa-heart"></i></button>
+                            <button class="product-action-btn"><i class="fas fa-shopping-bag"></i></button>
+                            <button class="product-action-btn"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">DE Exclusive</p>
+                        <h3 class="product-name">Double-Breasted Blazer</h3>
+                        <p class="product-price">$1,750</p>
+                    </div>
+                </div>
+
+                <div class="product-card reveal">
+                    <div class="product-image-wrapper">
+                        <img class="product-img" src="https://images.unsplash.com/photo-1659708701940-e60893ef03d0?w=500&auto=format&fit=crop&q=60" alt="Product">
+                        <div class="product-actions">
+                            <button class="product-action-btn"><i class="far fa-heart"></i></button>
+                            <button class="product-action-btn"><i class="fas fa-shopping-bag"></i></button>
+                            <button class="product-action-btn"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">DE Exclusive</p>
+                        <h3 class="product-name">Gold Chain Bracelet</h3>
+                        <p class="product-price">$1,200</p>
+                    </div>
+                </div>
+
+                <div class="product-card reveal">
+                    <div class="product-image-wrapper">
+                        <img class="product-img" src="https://images.unsplash.com/photo-1581778571772-11f8c6af4103?w=500&auto=format&fit=crop&q=60" alt="Product">
+                        <span class="product-badge">New</span>
+                        <div class="product-actions">
+                            <button class="product-action-btn"><i class="far fa-heart"></i></button>
+                            <button class="product-action-btn"><i class="fas fa-shopping-bag"></i></button>
+                            <button class="product-action-btn"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">DE Exclusive</p>
+                        <h3 class="product-name">Classic Aviator Sunglasses</h3>
+                        <p class="product-price">$480</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Editorial / Lookbook -->
+<section class="lookbook">
+    <div class="lookbook-track">
+
+        <div class="page active">
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1200&q=80">
+            <div class="overlay">
+                <h3>Summer Elegance</h3>
+                <p>Luxury crafted for modern minimalism</p>
+            </div>
+        </div>
+
+        <div class="page">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1200&q=80">
+            <div class="overlay">
+                <h3>Urban Class</h3>
+                <p>Bold silhouettes, refined detail</p>
+            </div>
+        </div>
+
+        <div class="page">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&q=80">
+            <div class="overlay">
+                <h3>Evening Luxe</h3>
+                <p>Designed for unforgettable moments</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="section-header reveal">
+            <p class="section-tag">Client Stories</p>
+            <h2 class="section-title">Words of Elegance</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="testimonials-container reveal">
+            <div class="quote-mark">"</div>
+            <div id="testimonialSlider">
+                <p class="testimonial-quote" id="testQuote">DE Exclusive has completely transformed my wardrobe. Every piece feels like it was made just for me — the quality is simply unmatched. It's not fashion, it's art you wear.</p>
+                <p class="testimonial-author" id="testAuthor">Amara Okafor</p>
+                <p class="testimonial-role" id="testRole">Fashion Director, Vogue Africa</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="instagram-section" id="accessories">
+        <div class="section-header reveal">
+            <p class="section-tag">@deexclusivecollection</p>
+            <h2 class="section-title">Follow Our Journey</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="instagram-grid">
+            <div class="insta-item">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&q=80" alt="Instagram">
+                <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+            </div>
+            <div class="insta-item">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&q=80" alt="Instagram">
+                <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+            </div>
+            <div class="insta-item">
+                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&q=80" alt="Instagram">
+                <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+            </div>
+            <div class="insta-item">
+                <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&q=80" alt="Instagram">
+                <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+            </div>
+            <div class="insta-item">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&q=80" alt="Instagram">
+                <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+            </div>
+            <div class="insta-item">
+                <img src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?w=400&q=80" alt="Instagram">
+                <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="reveal">
+            <p class="section-tag" style="color: var(--gold); margin-bottom: 18px;">Stay Exclusive</p>
+            <h2 class="section-title" style="margin-bottom: 15px;">Join Our Inner Circle</h2>
+            <p class="newsletter-desc">Be the first to access new collections, exclusive events, and private sales.</p>
+            <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo-main">DE EXCLUSIVE</a>
+                <div class="logo-sub">Collection</div>
+                <p>Crafting luxury experiences since 2020. Every piece in our collection is a testament to unparalleled craftsmanship and timeless design.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <a href="#">New Arrivals</a>
+                <a href="#">Women's</a>
+                <a href="#">Men's</a>
+                <a href="#">Accessories</a>
+                <a href="#">Bags</a>
+                <a href="#">Shoes</a>
+                <a href="#">Sale</a>
+            </div>
+            <div class="footer-col">
+                <h4>About</h4>
+                <a href="#">Our Story</a>
+                <a href="#">Craftsmanship</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Careers</a>
+                <a href="#">Press</a>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#">Contact Us</a>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">Size Guide</a>
+                <a href="#">FAQ</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="#">info@deexclusive.com</a>
+                <a href="#">+1 (800) 555-LUXE</a>
+                <a href="#">123 Fashion Avenue</a>
+                <a href="#">New York, NY 10001</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 DE Exclusive Collection. All rights reserved.</p>
+            <div class="footer-payments">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-apple-pay"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <script>
+/* ======================
+   PRELOADER
+====================== */
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        setTimeout(() => {
+            preloader.classList.add('hidden');
+        }, 1200);
+    }
+});
+
+
+/* ======================
+   HERO SLIDER
+====================== */
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slide');
+const indicators = document.querySelectorAll('.hero-indicator');
+
+function goToSlide(index) {
+    if (!slides.length) return;
+
+    slides[currentSlide].classList.remove('active');
+    indicators[currentSlide]?.classList.remove('active');
+
+    currentSlide = index;
+
+    slides[currentSlide].classList.add('active');
+    indicators[currentSlide]?.classList.add('active');
+}
+
+if (slides.length) {
+    setInterval(() => {
+        goToSlide((currentSlide + 1) % slides.length);
+    }, 6000);
+}
+
+
+/* ======================
+   NAVBAR + BACK TO TOP
+====================== */
+const navWrapper = document.getElementById('navWrapper');
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+    if (navWrapper) {
+        navWrapper.classList.toggle('scrolled', window.scrollY > 50);
+    }
+
+    if (backToTop) {
+        backToTop.classList.toggle('visible', window.scrollY > 500);
+    }
+});
+
+
+/* ======================
+   MOBILE MENU
+====================== */
+function toggleMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('menuOverlay');
+
+    hamburger?.classList.toggle('active');
+    mobileMenu?.classList.toggle('open');
+    overlay?.classList.toggle('open');
+}
+
+
+/* ======================
+   SCROLL REVEAL
+====================== */
+const revealElements = document.querySelectorAll('.reveal');
+
+if ('IntersectionObserver' in window && revealElements.length) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 100);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    revealElements.forEach(el => observer.observe(el));
+}
+
+
+/* ======================
+   THEME TOGGLE
+====================== */
+const toggleBtn = document.getElementById("themeToggle");
+
+function applySavedTheme() {
+    if (!toggleBtn) return;
+
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+        toggleBtn.textContent = "☀️";
+    } else {
+        toggleBtn.textContent = "🌙";
+    }
+}
+
+if (toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+            toggleBtn.textContent = "☀️";
+        } else {
+            localStorage.setItem("theme", "light");
+            toggleBtn.textContent = "🌙";
+        }
+    });
+}
+
+applySavedTheme();
+
+
+/* ======================
+   FIXED SMOOTH SCROLL
+====================== */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+
+        // ❌ Ignore empty or "#" links
+        if (!href || href === "#") return;
+
+        const target = document.querySelector(href);
+
+        // ✅ Only smooth scroll if target exists
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+
+/* ======================
+   WISHLIST TOGGLE
+====================== */
+document.querySelectorAll('.product-action-btn').forEach(btn => {
+    const icon = btn.querySelector('i');
+
+    if (icon && icon.classList.contains('fa-heart')) {
+        btn.addEventListener('click', () => {
+            if (icon.classList.contains('far')) {
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+                icon.style.color = '#e63946';
+            } else {
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+                icon.style.color = '';
+            }
+        });
+    }
+});
+</script>
+</body>
+</html>

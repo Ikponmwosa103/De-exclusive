@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editorial | DE EXCLUSIVE COLLECTION</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Montserrat:wght@200;300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #F8F4EB;
+      color: #1A1A1A;
+      line-height: 1.5;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, h4, .serif {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+    }
+
+    :root {
+      --gold: #C9A96E;
+      --gold-light: #E3D3B0;
+      --dark-bg: #121212;
+      --cream: #F8F4EB;
+      --transition: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #E5DFD4;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--gold);
+    }
+
+    /* nav */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(248, 244, 235, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201, 169, 110, 0.2);
+      height: 80px;
+      transition: var(--transition);
+    }
+
+    .btn-gold {
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      background: transparent;
+      padding: 12px 28px;
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: var(--transition);
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+    }
+    .btn-gold:hover {
+      background: var(--gold);
+      color: #1A1A1A;
+      border-color: var(--gold);
+    }
+
+    .btn-outline-light {
+      border: 1px solid rgba(255,255,255,0.5);
+      background: transparent;
+      color: white;
+      transition: var(--transition);
+    }
+    .btn-outline-light:hover {
+      background: white;
+      color: black;
+      border-color: white;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1445205170230-053b83016050') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .section {
+      padding: 110px 0;
+    }
+
+    .gold {
+      color: var(--gold);
+    }
+
+    .card-hover {
+      transition: transform 0.45s ease, box-shadow 0.4s;
+      cursor: pointer;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+    }
+
+    .lookbook-card {
+      min-width: 460px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+    .lookbook-card img {
+      transition: transform 0.9s ease;
+    }
+    .lookbook-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .horizontal-scroll {
+      display: flex;
+      gap: 28px;
+      overflow-x: auto;
+      padding: 20px 40px 40px 40px;
+      scrollbar-width: thin;
+      scroll-snap-type: x mandatory;
+    }
+    .horizontal-scroll::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 42px;
+      margin-top: 64px;
+    }
+
+    @keyframes subtlePulse {
+      0% { opacity: 0.7; transform: scale(1);}
+      100% { opacity: 1; transform: scale(1.02);}
+    }
+    .limited-badge {
+      animation: subtlePulse 1.8s infinite alternate;
+    }
+
+    footer a, .footer-link {
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    footer a:hover {
+      color: var(--gold);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 68px !important; letter-spacing: -2px; }
+      .section { padding: 70px 0; }
+      .lookbook-card { min-width: 320px; }
+      .product-grid { gap: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+<div class="nav-wrapper" id="navWrapper">
+        <nav>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="nav-left">
+                <a href="./index.html">Home</a>
+                <a href="./index.html#women" class="collections-link">Collections</a>   <!-- This is the key fix -->
+                <a href="./index.html#women" class="collections-link">Men</a>
+                <a href="./index.html#women" class="collections-link">Accessories</a>
+                <a href="./index.html#women" class="collections-link" class="active">Editorial</a>
+            </div>
+            <div class="logo">
+                <a href="./index.html" class="logo-main">DE EXCLUSIVE</a>
+                <div class="logo-sub">Collection</div>
+            </div>
+            <div class="nav-right">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="far fa-user"></i></a>
+                <a href="#"><i class="far fa-heart"></i></a>
+                <button id="themeToggle">🌙</button>
+                <a href="#" class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">3</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="./index.html" onclick="toggleMenu()">Home</a>
+        <a href="./index.html#women" onclick="toggleMenu()">Collections</a>
+        <a href="./index.html#men" onclick="toggleMenu()">Men</a>
+        <a href="./index.html#accessories" onclick="toggleMenu()">Accessories</a>
+        <a href="./Editorial.html" onclick="toggleMenu()">Editorial</a>
+        <a href="#" onclick="toggleMenu()">About</a>
+        <a href="#" onclick="toggleMenu()">Contact</a>
+    </div>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="hero">
+    <div style="position: relative; z-index: 10; max-width: 1000px; padding: 0 24px;">
+        <i><h1 style="font-family: 'Inter', sans-serif; font-size: 140px; line-height: 0.85; letter-spacing: -8px; color: white; margin-bottom: 20px; font-weight: 500;">
+        EDITORIAL
+</h1></i>
+      <p style="font-size: 24px; color: rgba(255,255,255,0.92); font-weight: 300; letter-spacing: 4px; max-width: 550px; margin: 0 auto 48px;">
+        Unlock your exclusive fit
+      </p>
+         <div class="hero-buttons">
+          <a href="#collections" class="btn-primary">Shop Collection</a>
+          <a href="#editorial" class="btn-secondary">View Lookbook</a>
+         </div>
+    </div>
+  </section>
+
+  <!-- INTRODUCTION / STORY -->
+<section id="story" class="section">
+  <div style="max-width: 1280px; margin: 0 auto; padding: 0 32px;">
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center;">
+      
+      <div>
+        <div style="text-transform: uppercase; font-size: 11px; letter-spacing: 4px; color: #C9A96E; margin-bottom: 20px;">
+          ESTABLISHED IN PARIS
+        </div>
+
+        <h2 style="font-size: 64px; line-height: 1.05; letter-spacing: -2px; font-weight: 500;">
+          The legacy of <span style="color:#C9A96E;">master craftsmanship</span>
+        </h2>
+
+        <p style="margin-top: 28px; font-size: 18px; color: #3F3F3F; border-left: 3px solid #C9A96E; padding-left: 24px;">
+          For nearly a century, DE EXCLUSIVE has embodied the art of detail and timeless elegance. Every piece is crafted as a statement of refinement, blending tradition with modern design.
+        </p>
+
+        <!-- Quote -->
+        <div style="margin-top: 35px; font-size: 18px; font-style: italic; color: #1f1f1f; line-height: 1.6;">
+          “Style is a way to say who you are without speaking.”
+        </div>
+
+        <div style="margin-top: 10px; font-size: 12px; letter-spacing: 2px; color: #C9A96E;">
+          — DE EXCLUSIVE MANIFESTO
+        </div>
+      </div>
+
+      <div>
+        <img 
+          src="./Logo.jpeg" 
+          alt="Artisan workshop"
+          style="width: 100%; height: auto; box-shadow: 0 24px 48px -18px rgba(0,0,0,0.2); border-radius: 2px;">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- FEATURED COLLECTIONS -->
+<section id="story" class="section">
+  <div style="max-width: 1300px; margin: 0 auto; padding: 0 32px;">
+    
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; margin-bottom: 64px;">
+      
+      <div>
+        <div style="font-size: 11px; letter-spacing: 3px; color: #C9A96E;">
+          ICONIC COLLECTIONS
+        </div>
+        <h3 style="font-size: 52px; font-weight: 450; letter-spacing: -1px;">
+          Autumn–Winter Capsules
+        </h3>
+      </div>
+
+      <!-- <a href="#women" onclick="scrollToSection('women')" 
+        style="display: flex; align-items: center; gap: 8px; font-size: 13px; letter-spacing: 2px; border-bottom: 1px solid #1A1A1A; padding-bottom: 6px; text-decoration: none; color: black;">
+        VIEW ALL COLLECTIONS →
+      </a> -->
+
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 36px;">
+      
+      <div class="card-hover" onclick="scrollToSection('women')" 
+        style="cursor: pointer; position: relative; overflow: hidden; border-radius: 8px;">
+        
+        <img src="https://images.unsplash.com/photo-1739169585907-f1dc3b9dd0b9" 
+          style="width: 100%; height: 460px; object-fit: cover;" alt="LUNA">
+        
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; 
+          background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, transparent); 
+          padding: 60px 30px 30px;">
+          
+          <div style="color: white; font-size: 44px; font-weight: 400;">LUNA</div>
+          <div style="color: #E2D9CE; font-size: 14px;">Evening Dresses</div>
+        </div>
+      </div>
+
+      <div class="card-hover" onclick="scrollToSection('men')" 
+        style="cursor: pointer; position: relative; overflow: hidden; border-radius: 8px;">
+        
+        <img src="https://images.pexels.com/photos/1055691/pexels-photo-1055691.jpeg?auto=compress&cs=tinysrgb&w=800" 
+          style="width: 100%; height: 460px; object-fit: cover;" alt="NOCTURNE">
+        
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; 
+          background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, transparent); 
+          padding: 60px 30px 30px;">
+          
+          <div style="color: white; font-size: 44px; font-weight: 400;">NOCTURNE</div>
+          <div style="color: #E2D9CE; font-size: 14px;">Tailored Suits</div>
+        </div>
+      </div>
+
+      <div class="card-hover" onclick="scrollToSection('bags')" 
+        style="cursor: pointer; position: relative; overflow: hidden; border-radius: 8px;">
+        
+        <img src="https://images.pexels.com/photos/1366927/pexels-photo-1366927.jpeg?auto=compress&cs=tinysrgb&w=800" 
+          style="width: 100%; height: 460px; object-fit: cover;" alt="ESSENCE">
+        
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; 
+          background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, transparent); 
+          padding: 60px 30px 30px;">
+          
+          <div style="color: white; font-size: 44px; font-weight: 400;">ESSENCE</div>
+          <div style="color: #E2D9CE; font-size: 14px;">Luxury Leather Goods</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- NEW ARRIVALS SECTION (product grid) -->
+<section id="story" class="section">
+  <div style="max-width: 1300px; margin: 0 auto; padding: 0 32px;">
+    
+    <div style="text-align: center; margin-bottom: 20px;">
+      
+      <div style="font-size: 11px; letter-spacing: 3px; color: #C9A96E;">
+        NEW SEASON
+      </div>
+      
+      <h2 style="font-size: 54px; font-weight: 450; letter-spacing: -1px;">
+        New Arrivals
+      </h2>
+      
+      <p style="font-size: 17px; max-width: 420px; margin: 12px auto 0; color: #5E564C;">
+        The essence of contemporary refinement.
+      </p>
+
+    </div>
+
+    <div class="product-grid">
+
+      <div class="card-hover">
+        <div style="overflow: hidden; background: white; border-radius: 4px;">
+          <img src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d"
+            style="width: 100%; aspect-ratio: 4/5; object-fit: cover; transition: transform 0.6s;"
+            alt="silk blouse">
+        </div>
+        <div style="padding: 20px 0 8px; display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <div style="font-weight: 500;">Wild Silk Blouse</div>
+            <div style="color: #7A6E5D;">€890</div>
+          </div>
+          <i class="fa-regular fa-arrow-right" style="color: #C9A96E; opacity: 0; transition: 0.3s;"></i>
+        </div>
+      </div>
+
+      <div class="card-hover">
+        <div style="overflow: hidden;">
+          <img src="https://images.unsplash.com/photo-1598099947145-e85739e7ca28"
+            style="width: 100%; aspect-ratio: 4/5; object-fit: cover;">
+        </div>
+        <div style="padding: 20px 0 8px;">
+          <div style="font-weight: 500;">Black Cashmere Coat</div>
+          <div style="color: #7A6E5D;">€2,450</div>
+        </div>
+      </div>
+
+      <div class="card-hover">
+        <div style="overflow: hidden;">
+          <img src="https://images.unsplash.com/photo-1574201635302-388dd92a4c3f"
+            style="width: 100%; aspect-ratio: 4/5; object-fit: cover;">
+        </div>
+        <div style="padding: 20px 0 8px;">
+          <div style="font-weight: 500;">Vienne Croc Leather Bag</div>
+          <div style="color: #7A6E5D;">€3,200</div>
+        </div>
+      </div>
+
+      <div class="card-hover">
+        <div style="overflow: hidden;">
+          <img src="https://images.unsplash.com/photo-1589363358751-ab05797e5629"
+            style="width: 100%; aspect-ratio: 4/5; object-fit: cover;">
+        </div>
+        <div style="padding: 20px 0 8px;">
+          <div style="font-weight: 500;">Suede Chelsea Boots</div>
+          <div style="color: #7A6E5D;">€1,180</div>
+        </div>
+      </div>
+            <div class="card-hover">
+        <div style="overflow: hidden;">
+          <img src="https://images.unsplash.com/photo-1511556820780-d912e42b4980"
+            style="width: 100%; aspect-ratio: 4/5; object-fit: cover;">
+        </div>
+        <div style="padding: 20px 0 8px;">
+          <div style="font-weight: 500;">Suede Chelsea Boots</div>
+          <div style="color: #7A6E5D;">€1,180</div>
+        </div>
+      </div>
+            <div class="card-hover">
+        <div style="overflow: hidden;">
+          <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9"
+            style="width: 100%; aspect-ratio: 4/5; object-fit: cover;">
+        </div>
+        <div style="padding: 20px 0 8px;">
+          <div style="font-weight: 500;">Suede Chelsea Boots</div>
+          <div style="color: #7A6E5D;">€1,180</div>
+        </div>
+      </div>
+      
+
+    </div>
+  </div>
+</section>
+
+  <!-- LOOKBOOK HORIZONTAL -->
+<section id="story" class="section">
+  <div style="max-width: 1300px; margin: 0 auto; padding: 0 32px 40px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap;">
+      <div>
+        <div style="color: #C9A96E; font-size: 11px; letter-spacing: 3px;">AUTUMN 24 COLLECTION</div>
+        <h2 style="font-size: 66px; font-weight: 450; letter-spacing: -2px;">The Lookbook</h2>
+      </div>
+      <div style="max-width: 280px; font-size: 14px; opacity: 0.8;">A visual journey through the silhouettes of the season.</div>
+    </div>
+  </div>
+
+  <div class="horizontal-scroll">
+    <div class="lookbook-card">
+      <img src="https://images.pexels.com/photos/5468197/pexels-photo-5468197.jpeg?auto=compress&cs=tinysrgb&w=800" style="width: 100%; height: 620px; object-fit: cover;" alt="look1">
+      <div style="position: absolute; bottom: 40px; left: 40px;">
+        <div style="font-size: 11px; letter-spacing: 2px;">SAINT-GERMAIN BOULEVARD</div>
+        <div style="font-size: 32px; font-weight: 400;">VELVET CAPE</div>
+      </div>
+    </div>
+
+    <div class="lookbook-card">
+      <img src="https://images.unsplash.com/photo-1467043237213-65f2da53396f" style="width: 100%; height: 620px; object-fit: cover;" alt="look2">
+      <div style="position: absolute; bottom: 40px; left: 40px;">
+        <div style="font-size: 11px; letter-spacing: 2px;">ROYAL PALACE</div>
+        <div style="font-size: 32px; font-weight: 400;">EBONY TUXEDO</div>
+      </div>
+    </div>
+
+    <div class="lookbook-card">
+      <img src="https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=800" style="width: 100%; height: 620px; object-fit: cover;" alt="look3">
+      <div style="position: absolute; bottom: 40px; left: 40px;">
+        <div style="font-size: 11px; letter-spacing: 2px;">CAMBON STREET</div>
+        <div style="font-size: 32px; font-weight: 400;">PLEATED DRESS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WOMEN + MEN + BAGS -->
+<section id="story" class="section">
+  <div style="max-width: 1280px; margin: 0 auto; padding: 0 32px; text-align: center;">
+    <span class="gold" style="letter-spacing: 2px;">Women</span>
+    <h2 style="font-size: 48px; font-weight: 400; margin: 16px 0;">Women's Ready-to-Wear</h2>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px;">
+      <img src="https://images.pexels.com/photos/934069/pexels-photo-934069.jpeg?auto=compress&cs=tinysrgb&w=800" style="width:100%; height:450px; object-fit:cover;">
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <p style="font-size: 20px;">Timeless elegance between boldness and heritage. Discover the new autumn-winter women's collection.</p>
+        <button class="btn-gold" style="margin-top: 32px; width: fit-content;">EXPLORE →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="story" class="section">
+  <div style="max-width: 1280px; margin: 0 auto; padding: 0 32px; text-align: center;">
+    <span class="gold" style="letter-spacing: 2px;">Men</span>
+    <h2 style="font-size: 48px; font-weight: 400; margin: 16px 0;">Tailoring & Excellence</h2>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; direction: rtl;">
+      <div style="direction: ltr;">
+        <img src="https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=800" style="width:100%; height:450px; object-fit:cover;">
+      </div>
+
+      <div style="display: flex; flex-direction: column; justify-content: center; direction: ltr;">
+        <p style="font-size: 20px;">Architectural cuts, noble fabrics. The men's wardrobe reimagined.</p>
+        <button class="btn-gold" style="margin-top: 32px; width: fit-content;">DISCOVER →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="story" class="section">
+  <div style="max-width: 1280px; margin: 0 auto; padding: 0 32px; text-align: center;">
+    <span class="gold" style="letter-spacing: 2px;">Leather Goods</span>
+    <h2 style="font-size: 48px; font-weight: 400; margin: 16px 0;">Iconic Vespera Bag</h2>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px;">
+      <img src="https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=800" style="width:100%; height:450px; object-fit:cover;">
+      <div>
+        <p style="font-size: 20px;">Full-grain leather, handcrafted details, each bag carries the mark of the atelier.</p>
+        <button class="btn-gold" style="margin-top: 32px;">LIMITED EDITION</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIMITED DROP -->
+<section id="story" class="section">
+    <div style="max-width: 850px; margin: 0 auto; padding: 0 24px;">
+    
+    <div class="limited-badge" style="display: inline-flex; align-items: center; gap: 10px; background: rgba(201,169,110,0.12); backdrop-filter: blur(4px); padding: 10px 28px; border-radius: 60px; font-size: 11px; letter-spacing: 2.5px; border: 1px solid rgba(201,169,110,0.4); margin-bottom: 32px;">
+      <i class="fas fa-moon"></i> ULTRA-LIMITED EDITION — 88 pieces
+    </div>
+
+    <h2 style="font-size: 82px; font-weight: 400; letter-spacing: -3px; line-height: 1;">The Midnight Drop</h2>
+
+    <p style="font-size: 19px; max-width: 460px; margin: 28px auto 48px; color: #CFCFCF;">
+      Exclusive hand-embroidered collection, available for 72 hours. Each piece is numbered.
+    </p>
+
+    <button onclick="alert('Your reservation has been recorded. A Vespera advisor will contact you.')" 
+      style="background: #C9A96E; color: #0A0A0A; padding: 18px 64px; font-size: 13px; letter-spacing: 3px; border: none; font-weight: 600; cursor: pointer; transition: 0.3s;">
+      RESERVE NOW
+    </button>
+
+    <p style="margin-top: 40px; font-size: 12px; opacity: 0.6;">Worldwide shipping included • Certificate of authenticity</p>
+  </div>
+</section>
+ <!-- FOOTER -->
+<script>
+        // Preloader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('preloader').classList.add('hidden');
+            }, 1200);
+        });
+
+        // Mobile Menu
+        function toggleMenu() {
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const overlay = document.getElementById('menuOverlay');
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('open');
+            overlay.classList.toggle('open');
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            document.getElementById('navWrapper').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Theme Toggle
+        const toggleBtn = document.getElementById("themeToggle");
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark-mode");
+            toggleBtn.textContent = "☀️";
+        }
+
+        toggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            if (document.body.classList.contains("dark-mode")) {
+                localStorage.setItem("theme", "dark");
+                toggleBtn.textContent = "☀️";
+            } else {
+                localStorage.setItem("theme", "light");
+                toggleBtn.textContent = "🌙";
+            }
+        });
+
+        // Smooth scroll for internal links only
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+  <script>
+// Preloader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('preloader').classList.add('hidden');
+            }, 1200);
+        });
+
+        // Hero Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const indicators = document.querySelectorAll('.hero-indicator');
+
+        function goToSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            indicators[currentSlide].classList.remove('active');
+            currentSlide = index;
+            slides[currentSlide].classList.add('active');
+            indicators[currentSlide].classList.add('active');
+        }
+
+        setInterval(() => {
+            goToSlide((currentSlide + 1) % slides.length);
+        }, 6000);
+
+        // Navbar scroll effect
+        const navWrapper = document.getElementById('navWrapper');
+        window.addEventListener('scroll', () => {
+            navWrapper.classList.toggle('scrolled', window.scrollY > 50);
+
+            const backToTop = document.getElementById('backToTop');
+            backToTop.classList.toggle('visible', window.scrollY > 500);
+        });
+
+        // Mobile Menu
+        function toggleMenu() {
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const overlay = document.getElementById('menuOverlay');
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('open');
+            overlay.classList.toggle('open');
+        }
+
+        // Scroll Reveal
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => entry.target.classList.add('visible'), index * 100);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => observer.observe(el));
+
+        // Theme Toggle - Improved
+        const toggleBtn = document.getElementById("themeToggle");
+
+        function applySavedTheme() {
+            if (localStorage.getItem("theme") === "dark") {
+                document.body.classList.add("dark-mode");
+                toggleBtn.textContent = "☀️";
+            } else {
+                toggleBtn.textContent = "🌙";
+            }
+        }
+
+        toggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            if (document.body.classList.contains("dark-mode")) {
+                localStorage.setItem("theme", "dark");
+                toggleBtn.textContent = "☀️";
+            } else {
+                localStorage.setItem("theme", "light");
+                toggleBtn.textContent = "🌙";
+            }
+        });
+
+        // Apply theme on load
+        applySavedTheme();
+
+        // Smooth scroll for all anchor links (including Collections)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Wishlist heart toggle (unchanged)
+        document.querySelectorAll('.product-action-btn').forEach(btn => {
+            if (btn.querySelector('.fa-heart')) {
+                btn.addEventListener('click', function() {
+                    const icon = this.querySelector('i');
+                    if (icon.classList.contains('far')) {
+                        icon.classList.remove('far');
+                        icon.classList.add('fas');
+                        icon.style.color = '#e63946';
+                    } else {
+                        icon.classList.remove('fas');
+                        icon.classList.add('far');
+                        icon.style.color = '';
+                    }
+                });
+            }
+        });
+
+  </script>
+</body>
+</html>
