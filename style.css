@@ -336,6 +336,7 @@ body.dark-mode .lookbook-card {
             padding: 8px 60px;
             max-width: 1600px;
             margin: 0 auto;
+            
         }
         
 
@@ -442,9 +443,12 @@ body.dark-mode .lookbook-card {
         .hamburger {
             display: none;
             flex-direction: column;
-            gap: 5px;
+            gap: 4px;
             cursor: pointer;
             z-index: 1001;
+            margin-left: -20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
         }
 
         .hamburger span {
@@ -456,6 +460,7 @@ body.dark-mode .lookbook-card {
 
         .hamburger.active span:nth-child(1) {
             transform: rotate(45deg) translate(5px, 5px);
+            background-color: var(--gold-light);
         }
 
         .hamburger.active span:nth-child(2) {
@@ -659,7 +664,7 @@ body.dark-mode .lookbook-card {
         .btn-secondary {
             display: inline-block;
             padding: 16px 45px;
-            background: transparent;
+            background: transparent; 
             color: var(--white);
             text-decoration: none;
             font-size: 0.7rem;
@@ -1596,18 +1601,20 @@ footer::before {
     }
 }
         /* Mobile Menu */
-        .mobile-menu {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 100%;
-            max-width: 400px;
-            height: 100vh;
-            background: var(--darker);
-            z-index: 999;
-            padding: 100px 40px 40px;
-            transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-        }
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    background: var(--darker);
+
+    z-index: 2000; /* FIXED */
+
+    padding: 100px 40px 40px;
+    transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
 
         .mobile-menu.open {
             right: 0;
@@ -1719,8 +1726,15 @@ footer::before {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
+        
 
         @media (max-width: 768px) {
+            @media (max-width: 768px) {
+    .nav-right a:nth-child(2), /* user */
+    .nav-right a.cart-icon {
+        display: none;
+    }
+}
             .hero-title {
                 font-size: 2.2rem;
             }
@@ -1733,6 +1747,7 @@ footer::before {
                 flex-direction: column;
                 gap: 12px;
             }
+        
 
             .hero-buttons a {
                 text-align: center;
